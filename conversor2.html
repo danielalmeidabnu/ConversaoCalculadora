@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <title>Trabalho</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script language="javascript" src="calculo.js"></script>
+    <style>
+      body {
+        background-image: url("completo.png");
+      }
+</style>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+  <span class="navbar-brand mb-0 h1"><b>Conversor de Bases</b></span>
+</nav>
+<br>
+<div class="container"> 
+  <div class="jumbotron" style="background-color: #e5e8e8 ">
+    <div class="container-fluid">
+        <!-- Edit do Decimal -->
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Decimal</span>
+            </div>
+                <input id="decimal" type="text" class="form-control" placeholder="Digite Quantidade">
+        </div>
+        <br>
+    <!-- Edit do Binário -->
+        <div class="input-group">
+          <div class="input-group-prepend">
+              <span class="input-group-text">Binário</span>
+          </div>
+              <input id="binario" type="text" class="form-control" placeholder="Digite Quantidade">
+        </div>
+        <br>
+    <!-- Edit do Hexadecimal -->
+        <div class="input-group">
+          <div class="input-group-prepend">
+              <span class="input-group-text">Hexadecimal</span>
+          </div>
+              <input id="hexa" type="text" class="form-control" placeholder="Digite Quantidade">
+        </div>
+        <br>
+    <!-- Botões de calculo do Decimal e Binário -->    
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col col-lg-5">
+                    <button class="btn btn-outline-primary btn-block" onClick="converterBinToDec()">Binário para Decimal</button>
+                </div>
+                <div class="col col-lg-5">
+                    <button class="btn btn-outline-info btn-block" onClick="converterDecToBin()">Decimal para Binário</button>
+                </div>
+            </div>
+        </div>
+        <br>
+    <!-- Botões de calculo do Decimal e Binário -->
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col col-lg-5">
+                    <button class="btn btn-outline-primary btn-block" onClick="converterHexToDec()">Hexadecimal para Decimal</button>
+                </div>
+                <div class="col col-lg-5">
+                    <button class="btn btn-outline-info btn-block" onClick="converterDecToHex()">Decimal para Hexadecimal</button>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+  </div>
+</div>
+<br>
+<div class="container"> 
+  <div class="jumbotron" style="background-color: #e5e8e8 ">
+    <div class="container-fluid">
+    <!-- Calculos -->
+        <h4 class="text-center">Calculos...</h4>
+        <form>
+          <label><b>Binário:</b></label>
+          <div class="form-row">
+            <div class="col-4">
+              <input id="operadorBinario1" type="text" class="form-control" placeholder="Operador 1">
+            </div>
+          <div class="col-4">
+              <input id="operadorBinario2" type="text" class="form-control" placeholder="Operador 2">
+          </div>
+          <div class="col">
+              <input id="resultadoBinario" class="form-control" type="text" placeholder="Resultado..." readonly>
+          </div>
+        </div>
+      </form>
+      <br>
+      <div class="d-flex justify-content-center">
+        <div class="btn-group" role="group">
+          <button class="btn btn-outline-secondary" onClick="operacaoBinaria('+')">+</button>
+          <button class="btn btn-outline-danger" onClick="operacaoBinaria('-')">-</button>
+          <button class="btn btn-outline-primary" onClick="operacaoBinaria('*')">*</button>
+        </div>
+      </div>
+     <br>
+      <form>
+          <label><b>Hexadecimal:</b></label>
+          <div class="form-row">
+            <div class="col-4">
+              <input id="operadorHexadecimal1" type="text" class="form-control" placeholder="Operador 1">
+            </div>
+          <div class="col-4">
+              <input id="operadorHexadecimal2" type="text" class="form-control" placeholder="Operador 2">
+          </div>
+          <div class="col">
+              <input id="resultadoHexadecimal" class="form-control" type="text" placeholder="Resultado..." readonly>
+          </div>
+        </div>
+      </form>
+      <br>
+      <div class="d-flex justify-content-center">
+        <div class="btn-group" role="group">
+          <button class="btn btn-outline-secondary" onClick="operacaoHexadecimal('+')">+</button>
+          <button class="btn btn-outline-danger" onClick="operacaoHexadecimal('-')">-</button>
+          <button class="btn btn-outline-primary" onClick="operacaoHexadecimal('*')">*</button>
+        </div>
+      </div>
+     <br>
+      <form>
+          <label><b>Decimal:</b></label>
+          <div class="form-row">
+            <div class="col-4">
+              <input id="operadorDecimal1" type="text" class="form-control" placeholder="Operador 1">
+            </div>
+          <div class="col-4">
+              <input id="operadorDecimal2" type="text" class="form-control" placeholder="Operador 2">
+          </div>
+          <div class="col">
+              <input id="resultadoDecimal" class="form-control" type="text" placeholder="Resultado..." readonly>
+          </div>
+        </div>
+      </form>
+      <br>
+      <div class="d-flex justify-content-center">
+        <div class="btn-group" role="group">
+          <button class="btn btn-outline-secondary" onClick="operacaoDecimal('+')">+</button>
+          <button class="btn btn-outline-danger" onClick="operacaoDecimal('-')">-</button>
+          <button class="btn btn-outline-primary" onClick="operacaoDecimal('*')">*</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
