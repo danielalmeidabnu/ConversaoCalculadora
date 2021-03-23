@@ -8,27 +8,17 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="estilo.css">
 <script language="javascript" src="calculo.js"></script>
-<style>
-  body {
-    background-image: url("images/completo.png");
-  }
-
-  #img {
-    margin-left: 1px;
-    margin-bottom: 10px;
-  }
-
-</style>
 </head>
 
-<body>
-<nav class="navbar navbar-dark">
-  <a class="navbar-brand" href="#calculo">
-    <img src="images/binary.png" width="48" height="48" class="d-inline-block align-top" alt="">
-  </a>
-</nav>
-<br>
+<body id="corpo">
+  <nav class="navbar navbar-dark">
+    <a class="navbar-brand" href="#calculo">
+      <img src="images/binary.png" width="48" height="48" class="d-inline-block align-top" alt="">
+    </a>
+  </nav>
+  <br>
   <div class="container">
     <div class="jumbotron" style="background-color: #e5e8e8 ">
       <h4 class="text-center">Conversão...</h4>
@@ -156,10 +146,12 @@
         </form>
         <br>
         <div class="d-flex justify-content-center">
-          <div class="btn-group" role="group">
-            <button class="btn btn-outline-secondary" onClick="operacaoDecimal('+')">+</button>
-            <button class="btn btn-outline-danger" onClick="operacaoDecimal('-')">-</button>
-            <button class="btn btn-outline-primary" onClick="operacaoDecimal('*')">*</button>
+          <div class="d-flex justify-content-center">
+            <div class="btn-group" role="group">
+              <button class="btn btn-outline-secondary" onClick="operacaoDecimal('+')">+</button>
+              <button class="btn btn-outline-danger" onClick="operacaoDecimal('-')">-</button>
+              <button class="btn btn-outline-primary" onClick="operacaoDecimal('*')">*</button>
+            </div>
           </div>
         </div>
       </div>
@@ -167,7 +159,7 @@
   </div>
   <div class="container">
     <div class="jumbotron" style="background-color: #e5e8e8 ">
-    <h4 class="text-center">Lógica Booleana...</h4>
+      <h4 class="text-center">Lógica Booleana...</h4>
       <div class="container-fluid">
         <!-- Lógica Booleana -->
 
