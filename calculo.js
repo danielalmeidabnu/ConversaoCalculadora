@@ -16,6 +16,16 @@ function operacaoBinariaHexadecimal(operacao) {
       operacao
     );
 }
+
+function operacaoHexadecimalBinaria(operacao) {
+  document.getElementById('ResultadoHexaBinario').value =
+    CalcularHexadecimalBinario(
+      document.getElementById('Operadorhexa').value,
+      document.getElementById('Operadorhexabinario').value,
+      operacao
+    );
+}
+
 //Novo ---
 
 function operacaoHexadecimal(operacao) {
@@ -154,6 +164,13 @@ function CalcularBinarioeHexadecimal(operador1, operador2, operacao) {
   var operado2 = hexToDecimal(operador2);
   var resultado = CalcularDecimal(operado1, operado2, operacao);
   return decimalToBinario(resultado);
+}
+
+function CalcularHexadecimalBinario(operador1, operador2, operacao) {
+  var operado1 = hexToDecimal(operador1);
+  var operado2 = binarioToDecimal(operador2);
+  var resultado = CalcularDecimal(operado1, operado2, operacao);
+  return DecimalparaHexa(resultado);
 }
 
 //Nova funtion pra calculadora -----
