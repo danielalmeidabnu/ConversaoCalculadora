@@ -3,15 +3,28 @@ function operacaoBinaria(operacao) {
     CalcularBinario(
       document.getElementById('operadorBinario1').value,
       document.getElementById('operadorBinario2').value,
-      operacao);
+      operacao
+    );
 }
+
+//Novo ---
+function operacaoBinariaHexadecimal(operacao) {
+  document.getElementById('ResultadoBinarioHexa').value =
+    CalcularBinarioeHexadecimal(
+      document.getElementById('OperadorBinario').value,
+      document.getElementById('Operadorhexadecimal').value,
+      operacao
+    );
+}
+//Novo ---
 
 function operacaoHexadecimal(operacao) {
   document.getElementById('resultadoHexadecimal').value =
     CalcularHexadecimal(
       document.getElementById('operadorHexadecimal1').value,
       document.getElementById('operadorHexadecimal2').value,
-      operacao);
+      operacao
+    );
 }
 
 function operacaoDecimal(operacao) {
@@ -19,7 +32,8 @@ function operacaoDecimal(operacao) {
     CalcularDecimal(
       parseInt(document.getElementById('operadorDecimal1').value),
       parseInt(document.getElementById('operadorDecimal2').value),
-      operacao);
+      operacao
+    );
 }
 
 function converterHexToDec() {
@@ -132,6 +146,17 @@ function CalcularBinario(operador1, operador2, operacao) {
   return decimalToBinario(resultado);
 
 }
+
+//Nova funtion pra calculadora -----
+
+function CalcularBinarioeHexadecimal(operador1, operador2, operacao) {
+  var operado1 = binarioToDecimal(operador1);
+  var operado2 = hexToDecimal(operador2);
+  var resultado = CalcularDecimal(operado1, operado2, operacao);
+  return decimalToBinario(resultado);
+}
+
+//Nova funtion pra calculadora -----
 
 function CalcularDecimal(operador1, operador2, operacao) {
 
