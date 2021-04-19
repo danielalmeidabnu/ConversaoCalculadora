@@ -1,3 +1,4 @@
+
   #corpo {
     background-image: url("images/completo.png");
   }
@@ -5,4 +6,8 @@
   #img {
     margin-left: 1px;
     margin-bottom: 10px;
+  }
+
+  #textosmall{
+  	padding-right: 80px;
   }

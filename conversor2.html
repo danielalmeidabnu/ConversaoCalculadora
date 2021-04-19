@@ -10,6 +10,7 @@
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="estilo.css">
 <script language="javascript" src="calculo.js"></script>
+<script language="javascript" src="boolean.js"></script>
 </head>
 
 <body id="corpo">
@@ -83,7 +84,8 @@
     <div class="jumbotron" style="background-color: #e5e8e8 ">
       <div class="container-fluid">
         <!-- Calculos -->
-        <h4 id="#calculo" class="text-center">Cálculo...</h4>
+            <h4 id="calculo" class="text-center">Calculo...</h4>  
+        </div>
         <form>
           <label><b>Binário:</b></label>
           <div class="form-row">
@@ -162,11 +164,26 @@
         </div>
         <!--Em desenvolvimento-->
         <br>
-        <input id="OperadorBinario" class="form-control" type="text" placeholder="Binario">
-        <input id="Operadorhexadecimal" class="form-control" type="text" placeholder="Hexadecimal">
-        <input id="ResultadoBinarioHexa" class="form-control" type="text" placeholder="Resultado..." readonly>
+        <label><b>Binario para Hexadecimal:</b></label>
+        <div class="form-row">
+          <!--Campos Operador1,2 e Resultado...-->
+          <div class="col-4">
+            <input id="OperadorBinario" class="form-control" type="text" placeholder="Binario">
+          </div>
+          <div class="col-4">
+            <input id="Operadorhexadecimal" class="form-control" type="text" placeholder="Hexadecimal">
+          </div>
+          <div class="col-4">
+            <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Binário</span>
+          </div>
+            <input id="ResultadoBinarioHexa" class="form-control" type="text" placeholder="Resultado..." readonly>
+          </div>
+        </div>
+        </div>
+        <br>
         <div class="d-flex justify-content-center">
-          <br>
           <!--Botões + - *-->
           <div class="btn-group" role="group">
             <button class="btn btn-outline-success" onClick="operacaoBinariaHexadecimal('+')">+</button>
@@ -175,11 +192,26 @@
           </div>
         </div>
         <br>
-        <input id="Operadorhexa" class="form-control" type="text" placeholder="Hexadecimal">
-        <input id="Operadorhexabinario" class="form-control" type="text" placeholder="Binario">
-        <input id="ResultadoHexaBinario" class="form-control" type="text" placeholder="Resultado..." readonly>
+        <label><b>Hexadecimal para Binario:</b></label>
+        <div class="form-row">
+            <!--Campos Operador1,2 e Resultado...-->
+          <div class="col-4">
+            <input id="Operadorhexa" class="form-control" type="text" placeholder="Hexadecimal">
+          </div>
+          <div class="col-4">
+            <input id="Operadorhexabinario" class="form-control" type="text" placeholder="Binario">
+          </div>
+          <div class="col-4">
+            <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Hexadecimal</span>
+          </div>
+            <input id="ResultadoHexaBinario" class="form-control" type="text" placeholder="Resultado..." readonly>
+          </div>
+          </div>
+        </div>
+        <br>
         <div class="d-flex justify-content-center">
-          <br>
           <!--Botões + - *-->
           <div class="btn-group" role="group">
             <button class="btn btn-outline-success" onClick="operacaoHexadecimalBinaria('+')">+</button>
@@ -193,9 +225,36 @@
   </div>
   <div class="container">
     <div class="jumbotron" style="background-color: #e5e8e8 ">
-      <h4 class="text-center">Lógica Booleana...</h4>
+      <h4 class="text-center">Lógica Booleana...<span id="desenvolvimento" class="badge badge-secondary">Em desenvolvimento</span></h4>
+      <br>
       <div class="container-fluid">
         <!-- Lógica Booleana -->
+        <div class="form-row d-flex justify-content-center">
+            <div class="col-2">
+              <input id="boleean1" type="text" class="form-control" placeholder="0 ou 1">
+            </div>
+            <div class="col-2">
+              <input id="boolean2" type="text" class="form-control" placeholder="0 ou 1">
+            </div>
+            <div class="col-2">
+              <input id="booleanresult" class="form-control" type="text" placeholder="Resultado..." readonly>
+            </div>
+              <button class=" btn btn-success" onClick="OperacaoIfAnd()">If And</button>
+          </div>
+          <br> <!---------------------------------------------------------------- -->
+          <div class="form-row d-flex justify-content-center">
+            <div class="col-2">
+              <input id="boleean01" type="text" class="form-control" placeholder="0 ou 1">
+            </div>
+            <div class="col-2">
+              <input id="boolean02" type="text" class="form-control" placeholder="0 ou 1">
+            </div>
+            <div class="col-2">
+              <input id="booleanresult01" class="form-control" type="text" placeholder="Resultado..." readonly>
+            </div>
+              <button class=" btn btn-success" onClick="OperacaoIfOr()">If Or</button>
+          </div>
+          <small id="textosmall" class="form-text text-muted">0(False) 1(True).</small>
 
       </div>
     </div>
