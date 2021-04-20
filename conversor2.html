@@ -233,29 +233,46 @@
             <div class="col-2">
               <input id="boleean1" type="text" class="form-control" placeholder="0 ou 1">
             </div>
+            <div class="input-group-prepend">
+              <span class="input-group-text">And</span>
+            </div>
             <div class="col-2">
               <input id="boolean2" type="text" class="form-control" placeholder="0 ou 1">
             </div>
-            <div class="col-2">
-              <input id="booleanresult" class="form-control" type="text" placeholder="Resultado..." readonly>
+            <div class="input-group-prepend">
+              <span class="input-group-text">=</span>
             </div>
-              <button class=" btn btn-success" onClick="OperacaoIfAnd()">If And</button>
+            <div class="col-2">
+              <input id="booleanresult" class="form-control" type="text" placeholder="..." readonly>
+            </div>
+              <button class=" btn btn-outline-info" onClick="OperacaoIfAnd()">Resultado</button>
           </div>
           <br> <!---------------------------------------------------------------- -->
           <div class="form-row d-flex justify-content-center">
             <div class="col-2">
+              <!--
+              <select class="custom-select" id="inputGroupSelect01">
+                <option selected>Escolha...</option>
+                <option value="0">False</option>
+                <option value="1">True</option>
+             </select>
+              -->
               <input id="boleean01" type="text" class="form-control" placeholder="0 ou 1">
+            </div>
+            <div class="input-group-prepend">
+              <span class="input-group-text">Or</span>
             </div>
             <div class="col-2">
               <input id="boolean02" type="text" class="form-control" placeholder="0 ou 1">
             </div>
-            <div class="col-2">
-              <input id="booleanresult01" class="form-control" type="text" placeholder="Resultado..." readonly>
+            <div class="input-group-prepend">
+              <span class="input-group-text">=</span>
             </div>
-              <button class=" btn btn-success" onClick="OperacaoIfOr()">If Or</button>
+            <div class="col-2">
+              <input id="booleanresult01" class="form-control" type="text" placeholder="..." readonly>
+            </div>
+              <button class=" btn btn-outline-info" onClick="OperacaoIfOr()">Resultado</button>
           </div>
-          <small id="textosmall" class="form-text text-muted">0(False) 1(True).</small>
-
       </div>
     </div>
   </div>
