@@ -1,3 +1,46 @@
+function criarTable(){
+  const corpo = $('#divIfAnd');
+  const p = $('#boleean1').val();
+  const q = $('#boolean2').val();
+  const result = $('#booleanresult').val();
+
+    corpo.append(`
+                  <br>
+                  <br>
+                  <table class="table table-hover table-bordered">
+                    <thead class="thead-dark">
+                      <tr class="text-center">
+                        <th scope="col">p</th>
+                        <th scope="col">q</th>
+                        <th scope="col">Resultado</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="text-center">
+                        <td class="table-info">${p}</td>
+                        <td class="table-success">0</td>
+                        <td class="table-secondary">${result}</td>
+                      </tr>
+                      <tr class="text-center">
+                        <td class="table-info">${p}</td>
+                        <td class="table-success">1</td>
+                        <td class="table-secondary">True</td>
+                      </tr>
+                      <tr class="text-center">
+                        <td class="table-info">${q}</td>
+                        <td class="table-success">0</td>
+                        <td class="table-secondary">${result}</td>
+                      </tr>
+                      <tr class="text-center">
+                      <td class="table-info">${q}</td>
+                      <td class="table-success">1</td>
+                      <td class="table-secondary">True</td>
+                    </tr>
+                    </tbody>
+                    </table>`)
+}
+
+
 function operacaoBinaria(operacao) {
   document.getElementById('resultadoBinario').value =
     CalcularBinario(

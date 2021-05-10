@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <meta charset="utf-8">
-<title>Trabalho</title>
+<title>Conversões</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--- CSS -->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="estilo.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script language="javascript" src="calculo.js"></script>
 <script language="javascript" src="boolean.js"></script>
 </head>
@@ -227,7 +228,7 @@
     <div class="jumbotron" style="background-color: #e5e8e8 ">
       <h4 class="text-center">Lógica Booleana...<span id="desenvolvimento" class="badge badge-secondary">Em desenvolvimento</span></h4>
       <br>
-      <div class="container-fluid">
+      <div id="divIfAnd" class="container-fluid">
         <!-- Lógica Booleana -->
         <div class="form-row d-flex justify-content-center">
             <div class="col-2">
@@ -247,16 +248,9 @@
             </div>
               <button class=" btn btn-outline-info" onClick="OperacaoIfAnd()">Resultado</button>
           </div>
-          <br> <!---------------------------------------------------------------- -->
+          <br> <!------------------------------------------------------------------>
           <div class="form-row d-flex justify-content-center">
             <div class="col-2">
-              <!--
-              <select class="custom-select" id="inputGroupSelect01">
-                <option selected>Escolha...</option>
-                <option value="0">False</option>
-                <option value="1">True</option>
-             </select>
-              -->
               <input id="boleean01" type="text" class="form-control" placeholder="0 ou 1">
             </div>
             <div class="input-group-prepend">
@@ -272,6 +266,12 @@
               <input id="booleanresult01" class="form-control" type="text" placeholder="..." readonly>
             </div>
               <button class=" btn btn-outline-info" onClick="OperacaoIfOr()">Resultado</button>
+          </div>
+          <br>
+          <div class="container" style="width: 600px;">
+            <button class="btn btn-outline-primary btn-block" onclick="criarTable()">
+              Criar Tabela Verdade
+            </button>
           </div>
       </div>
     </div>
